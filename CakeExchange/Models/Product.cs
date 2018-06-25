@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CakeExchange.Models
 {
+   
     public abstract class Product
     {
         [Required]
@@ -15,7 +16,6 @@ namespace CakeExchange.Models
         [Range(1, Int32.MaxValue, ErrorMessage = "Некорректное количество")]
         public int Count { get; set; }
 
-        // не успела доработать валидацию модели. криво с ценой пока
         [Display(Name = "Цена:")]
         [Range(1, Double.MaxValue, ErrorMessage = "Некорректная цена")]
         public decimal Price { get; set; }

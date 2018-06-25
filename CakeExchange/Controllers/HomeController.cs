@@ -34,6 +34,9 @@ namespace CakeExchange.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateOffers(Offer orderOffer)
         {
+            // пока такая обработка ошиб
+            if (orderOffer.Price <= 0 || orderOffer.Count <= 0)
+                return RedirectToAction("Index");
 
             orderOffer.Date = DateTime.Now;
 
@@ -102,6 +105,10 @@ namespace CakeExchange.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePurchase(Purchase orderPurchase)
         {
+            // пока такая обработка 
+            if (orderPurchase.Price <= 0 || orderPurchase.Count <= 0)
+                return RedirectToAction("Index");
+
             var count = 0;
             orderPurchase.Date = DateTime.Now;
 
