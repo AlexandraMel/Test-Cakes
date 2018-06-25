@@ -1,0 +1,11 @@
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\bin\Debug\netcoreapp2.0\CakeExchange.deps.json
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\bin\Debug\netcoreapp2.0\CakeExchange.runtimeconfig.json
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\bin\Debug\netcoreapp2.0\CakeExchange.runtimeconfig.dev.json
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\bin\Debug\netcoreapp2.0\CakeExchange.dll
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\obj\Debug\netcoreapp2.0\CakeExchange.csproj.CoreCompileInputs.cache
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\obj\Debug\netcoreapp2.0\CakeExchange.AssemblyInfoInputs.cache
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\obj\Debug\netcoreapp2.0\CakeExchange.AssemblyInfo.cs
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\bin\Debug\netcoreapp2.0\CakeExchange.pdb
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\obj\Debug\netcoreapp2.0\CakeExchange.dll
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\obj\Debug\netcoreapp2.0\CakeExchange.pdb
+C:\Users\Alexandra\Desktop\cake\CakeExchange\CakeExchange\obj\Debug\netcoreapp2.0\CakeExchange.csprojAssemblyReference.cache

@@ -1,0 +1,151 @@
+﻿@using CakeExchange.Models
+@model Product
+
+@{
+    ViewData["Title"] = "Биржа пряников";
+}
+
+<div style=" display: flex; flex-wrap: wrap; justify-content: space-around" >
+     
+    <div style="margin-bottom: 20px;">
+            
+        <form asp-action="CreatePurchase">
+            <h3>Купить: </h3>
+
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price"  class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Count" class="control-label"></label>
+                <input asp-for="Count" type="number" class="form-control" />
+                <span asp-validation-for="Count" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Ok" class="btn btn-default hov" />
+            </div>
+            
+
+        </form>
+            
+        <h4>Ордера на покупку:</h4>
+            
+        <table class="table table-bordered">
+            <thead class="header" style="background: gray; color: white; font-weight: bold;">
+            <td>Цена</td>
+            <td>Количество</td>
+            <td>Email </td>
+            </thead>
+            <tbody>
+
+            @foreach (Purchase order in ViewBag.purchases)
+            {
+                <tr>
+                    <td>@order.Price</td>
+                    <td>@order.Count</td>
+                    <td>@order.Email</td>
+                </tr>
+            }
+
+            </tbody>
+        </table>
+
+    </div>
+       
+    <div style="margin-bottom: 20px;">
+        <form asp-action="CreateOffers">
+            <h3>Продать: </h3>
+            
+
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Count" class="control-label"></label>
+                <input asp-for="Count" class="form-control" />
+                <span asp-validation-for="Count" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email"  class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Ok" class="btn btn-default hov" />
+            </div>
+        </form>
+            
+        <h4>Ордера на продажу:</h4>
+            
+        <table class="table table-bordered">
+            <thead class="header" style="background: gray; color: white; font-weight: bold;">
+            <td>Цена</td>
+            <td>Количество</td>
+            <td>Email </td>
+            </thead>
+            <tbody>
+
+            @foreach (Offer order in ViewBag.offers)
+            {
+                <tr>
+                    <td>@order.Price</td>
+                    <td>@order.Count</td>
+                    <td>@order.Email</td>
+                </tr>
+            }
+
+            </tbody>
+        </table>
+
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="col" style="margin-bottom: 20px">
+
+        <h3>Завершенные сделки: </h3>
+
+        <table class="table table-bordered">
+            <thead class="header" style="background: gray; color: white; font-weight: bold;">
+            <td>Выполнено</td>
+            <td>Дата К*</td>
+            <td>Дата П*</td>
+            <td>Цена</td>
+            <td>Количество</td>
+            <td>Email покупателя</td>
+            <td>Email продавца</td>
+            </thead>
+            <tbody>
+
+                @foreach (History trade in ViewBag.history)
+                {
+                    <tr>
+                        <td>@trade.Date</td>
+                        <td>@trade.DatePurchase</td>
+                        <td>@trade.DateOffer</td>
+                        <td>@trade.Price</td>
+                        <td>@trade.Count</td>
+                        <td>@trade.EmailPurchase</td>
+                        <td>@trade.EmailOffer</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
